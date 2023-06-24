@@ -1,0 +1,162 @@
+/* 
+  Challenge by Frontend Mentor.
+  Coded by CodeDerk.
+*/
+:root {
+  --body-font-size: 1rem;
+  --body-font-weight: 500;
+  --body-line-height: 1.5;
+  --body-font-family: Montserrat, Fraunces;
+  --color-primary: hsl(30, 38%, 92%);
+  --color-secondary: hsl(158, 36%, 37%);
+  --border-radius-sm: 0.5rem;
+  --border-radius-lg: 1rem;
+  --font-size-sm: 0.75rem;
+  --font-size-bs: 0.875rem;
+  --font-size-lg: 2rem;
+  --body-background-color: hsl(30, 38%, 92%);
+  --card-background-color: hsl(0, 0%, 100%);
+  --button-background-color: hsl(158, 36%, 37%);
+  --button-hover-background-color: #1c3b30;
+  --neutral-color: hsl(0, 0%, 100%);
+  --light-color: hsl(228, 12%, 48%);
+  --dark-color: hsl(212, 21%, 14%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-font-height);
+  font-family: var(--body-font-family);
+  background-color: var(--body-background-color);
+  color: var(--light-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  margin: 0;
+  line-height: 1;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+}
+
+button {
+  border: none;
+}
+
+/* Mobile Version */
+.card {
+  max-width: 342px;
+  background-color: var(--card-background-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.card .card-img .card-img-preview {
+  max-width: 100%;
+}
+.card .card-content {
+  padding: 1.5rem;
+}
+.card .card-content .tag {
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+.card .card-content .card-content-title {
+  font-family: "Fraunces";
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+.card .card-content .card-content-description {
+  font-size: var(--font-size-bs);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+.card .card-content .price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.card .card-content .price .current-price {
+  color: var(--color-secondary);
+  font-family: "Fraunces";
+  margin-right: 1rem;
+}
+.card .card-content .price .breaked-price {
+  text-decoration: line-through;
+  font-size: var(--font-size-sm);
+}
+.card .card-content .action-button {
+  min-width: 100%;
+  padding: 1rem;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-secondary);
+  color: hsl(0, 0%, 100%);
+  font-size: var(--font-size-bs);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card .card-content .action-button:hover {
+  cursor: pointer;
+  background-color: var(--button-hover-background-color);
+}
+
+/* Tablet and Desktop Version */
+@media screen and (min-width: 675px) {
+  .card {
+    max-width: 600px;
+    display: flex;
+  }
+  .card .card-img {
+    background-image: url("../images/image-product-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+  }
+  .card .card-img .card-img-preview {
+    display: none;
+  }
+  .card .card-content {
+    width: 50%;
+    padding: 2rem;
+  }
+  .card .card-content .tag {
+    margin-bottom: 1rem;
+  }
+  .card .card-content .card-content-title {
+    margin-bottom: 1.75rem;
+  }
+  .card .card-content .card-content-description {
+    margin-bottom: 2rem;
+  }
+  .card .card-content .price {
+    margin-bottom: 1.75rem;
+  }
+}
